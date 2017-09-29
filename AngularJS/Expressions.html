@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="firstName='Afsha'; lastName='Mohammed'">
+	<!--bind the data to HTML using expression-->
+  <p>My first expression: {{ 5 + 4 }}</p>
+  <h1>My first and last name is {{firstName+ " " +lastName}}</h1>
+
+  <!--Now we are bind the data using ng-bind directive-->
+
+
+  <P>My name is <span ng-bind="firstName+ ' ' + lastName"></span></P>
+</div>
+
+
+
+</body>
+</html>
