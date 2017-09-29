@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+	<head>
+	<title>Module</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			<input type="text" ng-model="name">
+				<h1>hello {{name}} !</h1>
+		</div>
+		<script>
+				//create a module using AngularJS function angular.module
+				var app = angular.module("myApp", []);
+				app.controller("myCtrl", function($scope){
+					$scope.name = "Afsha"; 
+				});
+		</script>
+	</body>
+</html>
