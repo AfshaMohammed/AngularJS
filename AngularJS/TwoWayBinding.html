@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Two way binding</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-app="myApp", ng-controller="myCtrl">
+			<input ng-model="firstName">
+			<p>My firstName is {{firstName}}</p>
+		</div>
+		<script>
+			var app = angular.module("myApp", []);
+			app.controller("myCtrl", function($scope){
+				$scope.firstName = "Afsha";
+			});
+		</script>
+	</body>
+</html>

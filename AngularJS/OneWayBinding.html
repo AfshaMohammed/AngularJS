@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>One way binding</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<p>We can do data bind to HTML using expressions/ng-bind directive</p> 
+			My first name is <p ng-bind="firstName"></p>
+            <p>My last name is {{lastName}}</p>
+		</div>
+		<script>
+			var app = angular.module("myApp", []); //create a module
+			app.controller("myCtrl", function($scope){ // create a controller and controller is connected to a module
+				$scope.firstName = "Afsha";
+				$scope.lastName = "Mohammed";
+			});
+		</script>
+	</body>
+</html>
