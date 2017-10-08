@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Sharing data between controllers using Services</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+			<div ng-controller="Ctrl1">
+  				First Name: <input type="text" ng-model="data.firstName"><br><br>
+  				LastName: <input type="text" ng-model="data.lastName">
+  				<h1>Controller One</h1>
+  					<p>My name is {{data.firstName}} {{data.lastName}}</p>
+			</div>
+			<hr>
+			<div ng-controller="Ctrl2">
+			<h1>Controller Two</h1>
+ 			<p>My friend name is {{data.firstName}} {{data.lastName}}</p>
+			</div>
+		<script>
+			var myApp = angular.module('myApp', []);
+			myApp.factory('MyService', function(){
+  			return {
+    		data: {
+      		firstName: '',
+      		lastName: ''
+    		}
+    	};
+	});
+
+		myApp.controller('Ctrl1', function($scope, MyService){
+  		$scope.data = MyService.data;
+		});
+
+		myApp.controller('Ctrl2', function($scope, MyService){
+   		$scope.data = MyService.data;
+		});
+       </script>
+	</body>
+</html>
