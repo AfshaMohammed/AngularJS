@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>create a controller</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			First Name: <input type="text" ng-model="firstName"><br><br>
+			Last Name: <input type="text" ng-model="lastName">
+			<p>My full name is {{firstName + " " + lastName}}</p> 
+		</div>
+		<script>
+			var app = angular.module("myApp", []); //create a module	
+			app.controller("myCtrl", function($scope){ //create a controller
+				$scope.firstName = "Afsha";
+				$scope.lastName = "Mohammed";
+			});
+		</script>
+	</body>
+</html>
