@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>AngularJS Scope and RootScope</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<p>The rootScope is available anywhere in the entire application</p>
+		<h1>{{color}}</h1>
+		<div ng-controller="myCtrl">
+			<p>Scope is the binding part between the HTML(View) and the controller(JavaScript) and it is an object with the available properties and methods.The Scope object is created with ng-controller directive</p>
+			<h1>{{color}}</h1>
+		</div>
+		<p>RootScope is the parent object of all child scopes. The rootScope is created with ng-app directive</p>
+		<h1>{{color}}</h1>
+		<script>
+			var app = angular.module("myApp", []);
+			app.run(function($rootScope){
+				$rootScope.color = "Blue";
+			});
+			app.controller("myCtrl", function($scope){
+				$scope.color = "Gray";
+			});
+		</script>
+	</body>
+</html>
