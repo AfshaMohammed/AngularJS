@@ -6,13 +6,14 @@
 	</head>
 	<body ng-app="myApp">
 		<div ng-controller="myCtrl">
-			<p>My first name is {{firstName + " " + lastName | uppercase}}</p>
+			<p>My first name is {{firstName | uppercase}}</p>
+			<p>My last name is {{lastName | lowercase}}</p>
 		</div>
 		<script>
 			var app = angular.module("myApp", []);
 			app.controller("myCtrl", function($scope){
 				$scope.firstName = "afsha";
-				$scope.lastName = "mohammed";
+				$scope.lastName = "MOHAMMED";
 			});
 		</script>
 	</body>
