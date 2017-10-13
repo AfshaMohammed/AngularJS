@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>AngularJS Events</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body ng-app="MyApp" ng-controller="MyCtrl">
+		<button onclick="myFunction()">Click Me!</button>
+				<div ng-show="ShowMe">
+					<h1>Menu</h1>
+					<p>Pizza</p>
+					<p>Garlic Rolls</p>
+					<p>Pasta</p>
+				</div>
+		<script>
+			var app = angular.module("MyApp", []);
+			app.controller("MyCtrl", function($scope){
+				$scope.ShowMe = false;
+				$scope.myFunction = function(){
+				$scope.ShowMe = !$scope.ShowMe;
+			}
+			});
+		</script>
+	</body>
+</html>
