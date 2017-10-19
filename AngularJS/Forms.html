@@ -7,9 +7,12 @@
 	<body>
 		<div ng-app="myApp" ng-controller="myCtrl">
 			<form>
-				First Name: <input type="text" ng-model="firstName">
-				Last Name: <input type="text" ng-model="lastName">
-				<h1>You Entered: {{firstName}} {{lastName}}</h1>
+				First Name: <input type="text" ng-model="firstName"><br><br>
+				Last Name: <input type="text" ng-model="lastName"><br><br>
+				Checkbox to show entered data:
+				<input type="checkbox" ng-model="myData">
+				<p ng-show="myData">FirstName: {{firstName}} <br>LastName: {{lastName}}</p> 
+
 			</form>
 		</div>
 		<script>
