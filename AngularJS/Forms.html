@@ -9,9 +9,25 @@
 			<form>
 				First Name: <input type="text" ng-model="firstName"><br><br>
 				Last Name: <input type="text" ng-model="lastName"><br><br>
+				Pick your field:<br>
+				<input type="radio" ng-model="field" value="UI Developer">UI Developer
+				<input type="radio" ng-model="field" value="Software Developer">Software Developer
+				<input type="radio" ng-model="field" value="Full Stack Developer">Full Stack Developer<br>
 				Checkbox to show entered data:
 				<input type="checkbox" ng-model="myData">
-				<p ng-show="myData">FirstName: {{firstName}} <br>LastName: {{lastName}}</p> 
+				<p ng-show="myData">FirstName: {{firstName}} <br>LastName: {{lastName}}<br>
+				Field:{{field}}</p> 
+				<div ng-switch="field">
+					<div ng-switch-when="UI Developer">
+						<p>You choose Front End Developer</p>
+					</div>
+					<div ng-switch-when="Software Developer">
+						<p>You choose Back End Developer</p>
+					</div>
+					<div ng-switch-when="Full Stack Developer">
+						<p>You choose Both Front End Developer and Back End Developer</p>
+					</div>
+				</div>
 
 			</form>
 		</div>
