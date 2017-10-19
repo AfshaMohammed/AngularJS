@@ -8,12 +8,15 @@
 		<div ng-app="myApp" ng-controller="myCtrl">
 			<form>
 				First Name: <input type="text" ng-model="firstName">
+				Last Name: <input type="text" ng-model="lastName">
+				<h1>You Entered: {{firstName}} {{lastName}}</h1>
 			</form>
 		</div>
 		<script>
 			var app = angular.module("myApp", []);
 			app.controller("myCtrl", function($scope){
 				$scope.firstName = "Afsha";
+				$scope.lastName = "Mohammed";
 			});
 
 		</script>
