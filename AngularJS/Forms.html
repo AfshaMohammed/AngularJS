@@ -15,8 +15,6 @@
 				<input type="radio" ng-model="field" value="Full Stack Developer">Full Stack Developer<br>
 				Checkbox to show entered data:
 				<input type="checkbox" ng-model="myData">
-				<p ng-show="myData">FirstName: {{firstName}} <br>LastName: {{lastName}}<br>
-				Field:{{field}}</p> 
 				<div ng-switch="field">
 					<div ng-switch-when="UI Developer">
 						<p>You choose Front End Developer</p>
@@ -27,8 +25,29 @@
 					<div ng-switch-when="Full Stack Developer">
 						<p>You choose Both Front End Developer and Back End Developer</p>
 					</div>
+				</div><br>
+				Select Gender:
+				<select ng-model="gender">
+					<option value="">
+    				<option value="Male">Male
+    				<option value="Female">Female
+    				<option value="Others">Others
+				</select>
+				<div ng-switch="myVar">
+  					<div ng-switch-when="Male">
+     				<p>Your Male</p>
+  				</div>
+  				<div ng-switch-when="Female">
+     				<p>Your Female</p>
+  				</div>
+  				<div ng-switch-when="Others">
+     				<p>Others</p>
+  				</div>
 				</div>
 
+				<p ng-show="myData">FirstName: {{firstName}} <br>LastName: {{lastName}}<br>
+				Field:{{field}}<br>
+				Gender: {{gender}}</p> 
 			</form>
 		</div>
 		<script>
