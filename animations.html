@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Animated transiitons using CSS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+		<style>
+			div{
+				background-color: yellow;
+				width:90px;
+				height:90px;
+			}
+			.ng-hide{
+				background-color: transparent;
+				width:0px;
+				height:0px;
+			}
+		</style>
+	</head>
+	<body ng-app="ngAnimate">
+		Check the div: <input type="checkbox" ng-model="myCheck">
+		<div ng-hide="myCheck">Afsha</div>
+	</body>
+</html>
