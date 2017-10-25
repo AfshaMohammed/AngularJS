@@ -1,0 +1,16 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>ng-if directive</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body ng-app="">
+		Tick checkbox: <input type="checkbox" ng-model="myVar" ng-init="myVar = true">
+		<div ng-if="myVar">
+			<h1>Angular JS ng-if directive</h1>
+			<p>if the express is true, it adds the HTML element to the DOM</p>
+			<p>If the expresssion is false, it removes the HTML element to the DOM</p>
+			<p>In AngularJS ng-If directive and ng-hide directives are different. ng-if directive compleptely removes the element from the DOM if expression is false whereas ng-hide directive just hide the element</p> 
+		</div>
+	</body>
+</html>
