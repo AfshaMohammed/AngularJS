@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Web Component</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="script.js"></script>
+	 
+</head>
+<body ng-app="myApp">
+	<h1>Web Component using Directive</h1>
+	<div actor-data></div>
+	<div ng-controller="myCtrl">
+		<div class="tile" ng-repeat="d in data">
+				<h3>{{d.name}}</h3>
+				<h4>{{d.movie}}</h4>
+				<img width="100" ng-src="{{d.image}}">
+		</div>
+	</div>
+</body>
+</html>
