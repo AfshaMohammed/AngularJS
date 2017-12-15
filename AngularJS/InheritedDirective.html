@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Inherited using directive</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body ng-app="app">
+		<div ng-controller="ctrl">
+			Sample: a={{a}}, b={{b}}<hr/>
+		Directive: <div message></div>
+		</div>
+
+		<script>
+			var app = angular.module("app", []);
+			app.controller("ctrl",  function($scope){
+				$scope.a = 10;
+				$scope.b = 20;
+			});
+
+			app.directive("message", function(){
+				return{
+					template: 'Sample: a={{a}} b={{b}}'
+				};
+			});
+		</script>
+	</body>
+</html>
