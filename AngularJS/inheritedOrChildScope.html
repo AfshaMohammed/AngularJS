@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Inherited/Child scope</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script type="text/javaScript" src="inheritedChild.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="parentScope">
+			Sample a={{a}} b={{b}}<br/>
+			a=<input type="text" ng-model="a">
+			<hr/>
+			<div ng-controller="childScope">
+				Sample a={{a}} b={{b}}<br/>
+				sample c={{c}} d={{d}}
+			</div>
+		</div>
+	</body>
+</html>
