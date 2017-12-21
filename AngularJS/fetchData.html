@@ -1,0 +1,16 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Fetching Data</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script type="text/javascript" src="fetchData.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="people">
+			<h1>Display programmer names and ages</h1>
+			<ul>
+				<li ng-repeat="person in persons">{{person.Name + ":" + person.Age}}</li>
+			</ul>
+		</div>
+	</body>
+</html>
