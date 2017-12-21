@@ -1,0 +1,16 @@
+{
+	"records":[
+		{
+			"Name":"Mehal",
+			"Age":"28"
+		},
+		{
+			"Name":"Rahul",
+			"Age":"38"
+		},
+		{
+			"Name":"Jai",
+			"Age":"28"
+		}
+	]
+}
