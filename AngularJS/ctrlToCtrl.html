@@ -1,0 +1,16 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Controller to controller communication</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script type="text/javascript" src="ctrlToCtrl.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="firstCtrl">
+			Name:<input type="text" ng-model="user.name">
+		</div>
+		<div ng-controller="secondCtrl">
+			Name:<input type="text" ng-model="otheruser.name">
+		</div>
+	</body>
+</html>
