@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Value Service</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			Username: <input type="text" ng-model="username">
+		</div>
+		<script>
+			var app = angular.module("myApp", []);
+			app.factory("username", function(){
+				var name = "Afsha";
+				return{
+					name:name
+				}
+			});
+			app.controller("myCtrl", function($scope, username){
+				$scope.username = username.name;
+			});
+
+		</script>
+	</body>
+</html>
