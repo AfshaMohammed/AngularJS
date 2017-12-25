@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Value</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			username:<input type="text" ng-model="username">
+		</div>
+		<script>
+			var app = angular.module("myApp", []);
+			app.value("username", "Afsha");
+			app.controller("myCtrl", function($scope, username){
+				$scope.username = username;
+			});
+		</script>
+	</body>
+</html>
